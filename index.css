@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: 1ch;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1ch;
+  align-items: flex-start;
+}
+
+.formBar {
+
+
+  display: flex;
+}
