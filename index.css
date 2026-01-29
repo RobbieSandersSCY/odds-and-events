@@ -5,7 +5,7 @@
 }
 
 #app {
-  max-width: 60ch;
+  max-width: 120ch;
   margin: 0 auto;
   padding: 1ch;
 
@@ -13,9 +13,14 @@
   flex-direction: column;
   gap: 1ch;
   align-items: flex-start;
+  justify-content: flex-start;
 }
 
-.formBar {
+button {
+  min-width: 4rem;
+}
+
+.BankBar {
 
 
   display: flex;
