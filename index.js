@@ -1,4 +1,7 @@
 // === STATE ===
+let addToBank = 0;
+let addToOdds = 0;
+
 const bankArray = [];
 const oddsArray = [];
 const evenArray = [];
@@ -10,13 +13,15 @@ const evenArray = [];
 
 
 // === COMPONENTS ===
-function AddToBankBar() {
+
+/** Form that allows user to add numbers to `bankArray` */
+function AddToBankForm() {
   const $form = document.createElement("form");
   $form.classList.add("BankBar");
   $form.innerHTML = `
     <label>
       Add a number to the bank
-      <input name="addField" type="number" min="1" />
+      <input name="addToBank" type="number" min="1" />
     </label>
     <button>Add number</button>
     <button>Sort 1</button>
@@ -26,7 +31,12 @@ function AddToBankBar() {
 }
 
 
+function AddToOdds() {
+  const
 
+
+  
+}
 
 
 
@@ -40,7 +50,7 @@ function render() {
     <h2>Odds</h2>
     <h2>Even</h2>
   `;
-  $app.querySelector("BankBar").replaceWith(AddToBankBar());
+  $app.querySelector("BankBar").replaceWith(AddToBankForm());
 
 
 }
