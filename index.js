@@ -14,18 +14,28 @@ const evenArray = [];
 
 function addToBank(n) {
   bankArray.push(n);
-  console.log(bankArray);
   render();
 return;
 }
 
-function Sort() {
-  console.log(bankArray[0]);
+function SortOne() {
+  // grab first value of bank array
+  const number = bankArray.shift();
+  if (number % 2 === 0) {
+    evenArray.push(number);
+  } else {
+    oddArray.push(number);
+  }
+  render()
 return;
 }
 
 function SortAll() {
-
+// loop thru bankArray until empty with sort
+  while (bankArray.length) {
+    SortOne();
+  };
+  render();
 return;
 }
 
@@ -54,9 +64,13 @@ function AddToBankForm() {
     if (action === "add") {
       const data = new FormData($form);
       const inputNum = data.get("inputNum");
-      addToBank(inputNum)
-    } else if ()
-    
+      if (inputNum === 0 || inputNum === "") return;
+      addToBank(+inputNum)
+    } else if (action === "sort1") {
+        SortOne();
+    } else if (action === "sortAll") {
+        SortAll();
+    } 
   });
   return $form;
 }
